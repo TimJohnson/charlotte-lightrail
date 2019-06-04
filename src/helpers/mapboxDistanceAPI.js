@@ -8,7 +8,7 @@ const orderByDistance = (origin, destinations) => {
 
   const nearestStationDistances = geolib
     .orderByDistance(currentLocation, stations)
-    .slice(0, 3)
+    .slice(0, 1)
     .sort((a, b) => a.key - b.key);
 
   const nearestStationCoordinates = nearestStationDistances.map(item => destinations[item.key]);
